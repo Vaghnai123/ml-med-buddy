@@ -23,7 +23,7 @@ def train_model():
         # load env file content to env vars
         load_dotenv()
 
-        PROJECT_ROOT = Path(os.getenv("PROJECT_ROOT")).resolve()
+        PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
         DATASET_PATH = (
             PROJECT_ROOT / os.getenv("DATASET_DIR") / os.getenv("DATASET_NAME")
