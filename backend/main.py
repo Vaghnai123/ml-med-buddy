@@ -45,3 +45,5 @@ def predict_heart_disease(input_data: HeartDiseaseInput):
 
 
 # Run Api :- uvicorn backend.main:app
+
+# Run File :- python backend/main.py

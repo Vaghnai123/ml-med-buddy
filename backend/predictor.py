@@ -63,3 +63,5 @@ def predict(input_data: dict):
 # }
 # result = predict(input_data=sample_input)
 # print(result)
+
+# Run File :- python backend/predictor.py
