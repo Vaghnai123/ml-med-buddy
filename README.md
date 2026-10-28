@@ -122,28 +122,6 @@ Move into the project directory:
 cd ml-med-buddy
 ```
 
-## 🐍 Create Virtual Environment
-
-Create a Python virtual environment:
-
-```bash
-python -m venv .venv
-```
-
-Activate it on Windows PowerShell:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-## 📦 Install Dependencies
-
-Install all required Python packages:
-
-```bash
-pip install -r requirements.txt
-```
-
 ## ⚙️ Environment Variables
 
 Create a `.env` file in the project root:
@@ -206,47 +184,57 @@ FastAPI automatically provides Swagger documentation at:
 http://127.0.0.1:8000/docs
 ```
 
-## 🖥️ Run the Streamlit Frontend
+## 🌐 Deployment
 
-Open another terminal and activate the virtual environment:
+# Running the Project Locally
+
+## Step 1: Create Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+## Step 2: Activate Virtual Environment on Windows
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-Then run:
+## Step 3: Install Dependencies
 
 ```bash
-streamlit run Frontend/app.py
+pip install -r requirements.txt
 ```
 
-The application will open in your browser, usually at:
+## Step 4: Train the Model
+
+```bash
+python backend/training.py
+```
+
+This creates the trained Joblib model.
+
+## Step 5: Start FastAPI
+
+```bash
+uvicorn backend.main:app --reload
+```
+
+The API will normally be available at:
 
 ```text
-http://localhost:8501
+http://127.0.0.1:8000
 ```
 
-## 🔗 API Endpoint
+## Step 6: Start Streamlit
 
-The heart disease prediction API endpoint is:
+Open another terminal and run:
 
-```text
-POST /predict-heart-disease
+```bash
+streamlit run frontend/app.py
 ```
 
-Example local URL:
-
-```text
-http://127.0.0.1:8000/predict-heart-disease
-```
-
-The API accepts patient information and returns:
-
-- Prediction
-- Probability
-- Diagnosis
-
-## 🌐 Deployment
+The Streamlit application will open in the browser.
 
 ### Backend
 
@@ -262,8 +250,5 @@ Health check:
 https://ml-med-buddy.onrender.com/health
 ```
 
-### Frontend
+---
 
-The Streamlit frontend is deployed using Streamlit Cloud.
-
-The Streamlit Cloud application uses the Render API URL through the `API_URL` secret.
