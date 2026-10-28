@@ -50,8 +50,6 @@ The `target` column represents the prediction class:
 
 - `0` → No heart disease
 - `1` → Heart disease
-
-The dataset contains 526 positive and 499 negative target records, giving a relatively balanced class distribution.
 ---
 
 
