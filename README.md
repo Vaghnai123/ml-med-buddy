@@ -1,6 +1,59 @@
 # ml-med-buddy
 
-This repository contains the code for **MedBuddy.ML**, a Machine Learning project developed for **Heart Disease Prediction**.
+MedBuddy.ML is a Machine Learning based web application designed to predict the risk of heart disease from a patient's clinical information.
+
+# Problem Statement
+
+Heart disease is one of the major health problems that requires timely identification and proper medical evaluation. Identifying the possibility of heart disease from multiple patient health parameters can be difficult and time-consuming when performed manually.
+
+The main problem addressed by this project is to develop a Machine Learning based system that can analyze a patient's clinical information and predict whether the patient is likely to have heart disease.
+
+Traditional approaches may require expert analysis of multiple health parameters such as age, blood pressure, cholesterol, chest pain type, maximum heart rate, exercise-induced angina, and other clinical measurements. Therefore, there is a need for a simple computational system that can process these parameters and provide a quick preliminary prediction.
+
+The **MedBuddy.ML** project addresses this problem by training a Machine Learning classification model on a Heart Disease dataset. The selected Random Forest model analyzes the patient's input features and predicts one of two classes: **heart disease detected** or **no heart disease detected**.
+
+The trained model is integrated with a **FastAPI backend** and a **Streamlit frontend**, allowing users to enter patient information through a web interface and receive the model's prediction and probability score.
+
+The system is intended as a **Machine Learning-based prediction and educational support tool**, not as a replacement for professional medical diagnosis.
+
+
+# Dataset Description
+
+The project uses the `heart.csv` dataset.
+
+The dataset contains **1,025 records and 14 columns**. The 13 feature columns are used as input variables and `target` is used as the output variable.
+
+## Dataset Features
+
+| Feature | Description | Type |
+|---|---|---|
+| `age` | Age of the patient in years | Numerical |
+| `sex` | Sex of the patient, where 1 represents male and 0 represents female | Categorical |
+| `cp` | Chest pain type | Categorical |
+| `trestbps` | Resting blood pressure in mm Hg | Numerical |
+| `chol` | Serum cholesterol level in mg/dl | Numerical |
+| `fbs` | Whether fasting blood sugar is greater than 120 mg/dl | Categorical |
+| `restecg` | Resting electrocardiographic result | Categorical |
+| `thalach` | Maximum heart rate achieved | Numerical |
+| `exang` | Exercise-induced angina | Categorical |
+| `oldpeak` | ST depression induced by exercise | Numerical |
+| `slope` | Slope of the peak exercise ST segment | Categorical |
+| `ca` | Number of major vessels colored by fluoroscopy | Numerical |
+| `thal` | Thalassemia status | Categorical |
+| `target` | Heart disease presence | Target |
+
+The categorical features in the supplied dataset are already encoded numerically, so an additional categorical encoding step is not required.
+
+## Target Variable
+
+The `target` column represents the prediction class:
+
+- `0` → No heart disease
+- `1` → Heart disease
+
+The dataset contains 526 positive and 499 negative target records, giving a relatively balanced class distribution.
+---
+
 
 ## 🚀 Features
 
