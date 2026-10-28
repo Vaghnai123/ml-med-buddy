@@ -188,25 +188,25 @@ http://127.0.0.1:8000/docs
 
 # Running the Project Locally
 
-## Step 1: Create Virtual Environment
+## Step 1 : Create Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-## Step 2: Activate Virtual Environment on Windows
+## Step 2 : Activate Virtual Environment on Windows
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-## Step 3: Install Dependencies
+## Step 3 : Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Step 4: Train the Model
+## Step 4 : Train the Model
 
 ```bash
 python backend/training.py
@@ -214,7 +214,7 @@ python backend/training.py
 
 This creates the trained Joblib model.
 
-## Step 5: Start FastAPI
+## Step 5 : Start FastAPI
 
 ```bash
 uvicorn backend.main:app --reload
@@ -226,7 +226,7 @@ The API will normally be available at:
 http://127.0.0.1:8000
 ```
 
-## Step 6: Start Streamlit
+## Step 6 : Start Streamlit
 
 Open another terminal and run:
 
